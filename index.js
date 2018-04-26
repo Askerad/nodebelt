@@ -11,7 +11,7 @@ module.exports = {
      *  @param boolean   output  : false = log won't show;
      *  @return String   log     : string passed to the console, with coloration and timestamp
      */
-    log: function(level, text, indent=0, output=true){
+    log: function(text, level="log", indent=0, output=true){
 
         var d = new Date();
         var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();

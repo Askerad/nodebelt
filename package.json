@@ -1,6 +1,6 @@
 {
   "name": "nodebelt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of tools to be used with Node.Js",
   "main": "index.js",
   "scripts": {
