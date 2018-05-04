@@ -1,6 +1,5 @@
 const chalk = require('chalk');
 
-
 module.exports = {
 
     /*  Logs stuff to the console
@@ -14,7 +13,7 @@ module.exports = {
     log: function(text, level="log", indent=0, output=true){
 
         var d = new Date();
-        var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
+        var time = this.lead(d.getHours(),2) + ":" + this.lead(d.getMinutes(),2) + ":" + this.lead(d.getSeconds(),2) + "." + this.lead(d.getMilliseconds(),3);
 
         var log = "[ ";
 
@@ -42,5 +41,25 @@ module.exports = {
         }
 
         return log;
+    },
+
+    /*  Leads a string with a set number of a certain character
+     *
+     *  @param String    string         : String to lead
+     *  @param int       size           : Amount of characters to lead
+     *  @param String    char           : Character to lead with. Default is "0".
+     *  @return String   leadedString   : Padded string
+     */
+    lead: function (string, size, char="0") {
+
+        var leadedString = string+"";
+
+        while (leadedString.length < size){
+
+            leadedString = char + leadedString;
+
+        }
+
+        return leadedString;
     }
 };
