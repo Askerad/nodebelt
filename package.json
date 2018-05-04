@@ -4,7 +4,11 @@
   "description": "A set of tools to be used with Node.Js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "coverage": "istanbul cover --dir ./reports _mocha -- -R spec test/*.js",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=d170f3f62b642c80f76c311e28a6320e0560a86bb293cb5c21084f4d0df074ac codeclimate-test-reporter < reports/lcov.info",
+    "test": "mocha -R spec test/*.js",
+    "ci": "npm run test && npm run coverage && npm run codeclimate",
+    "deploy": "npm deploy && npm run ci"
   },
   "repository": {
     "type": "git",
@@ -21,6 +25,8 @@
     "chalk": "^2.4.1"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.5.0",
+    "istanbul": "^0.4.5",
     "mocha": "^5.1.1"
   }
 }
