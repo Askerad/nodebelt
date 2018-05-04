@@ -1,14 +1,14 @@
 {
   "name": "nodebelt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A set of tools to be used with Node.Js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/Askerad/nodebelt.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Askerad/nodebelt.git"
   },
   "keywords": [
     "toolbelt",
@@ -19,5 +19,8 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1"
   }
 }
