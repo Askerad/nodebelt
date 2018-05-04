@@ -73,8 +73,6 @@ Adds a defined character (Default : "0") until the string is a certain size
 
 ```js
 
-// Warning, Actual bash output has colors not shown here.
-
 nb.lead(5,2)
     // -> 05
 
