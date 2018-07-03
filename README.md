@@ -1,5 +1,7 @@
 # Nodebelt
 [![npm version](https://badge.fury.io/js/nodebelt.svg)](https://badge.fury.io/js/nodebelt)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a6c85eeca335bdf44fc6/maintainability)](https://codeclimate.com/github/Askerad/nodebelt/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a6c85eeca335bdf44fc6/test_coverage)](https://codeclimate.com/github/Askerad/nodebelt/test_coverage)
 
 A set of tools to be used with Node.Js
 
