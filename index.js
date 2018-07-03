@@ -2,10 +2,7 @@ const chalk = require('chalk');
 
 module.exports = {
 
-    /**
-     * Verbosity of the functions
-     */
-    verbosity: this.levels.verbose,
+
 
     /**
      * Collection of flags representing verbosities of the functions
@@ -24,6 +21,11 @@ module.exports = {
          */
         verbose : 2
     },
+
+    /**
+     * Verbosity of the functions
+     */
+    verbosity: this.levels.verbose,
 
     /**  Logs stuff to the console
      *
