@@ -90,3 +90,6 @@ nb.lead("Hello", 6, ".")
 
 
 ```
+### nodebelt.verbosity
+
+    You can set this to [this.levels.verbose , this.levels.quiet , this.levels.stfu] to limit console output of nodebelt.log.
