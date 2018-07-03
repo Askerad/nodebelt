@@ -33,8 +33,16 @@ describe('nodebelt.log()', ()=>{
             assert.equal(log, "[ "+chalk.red("ERR")+" - "+time+" ] This is a test message");
         });
 
-    });
+        it('level : custom', function() {
 
+            var d = new Date();
+            var log = nb.log("This is a test message", "custom", 0, false)
+            var time = nb.lead(d.getHours(),2) + ":" + nb.lead(d.getMinutes(),2) + ":" + nb.lead(d.getSeconds(),2) + "." + nb.lead(d.getMilliseconds(),3);
+
+            assert.equal(log, "[ custom - "+time+" ] This is a test message");
+        });
+
+    });
 });
 
 describe('nodebelt.lead()', ()=>{

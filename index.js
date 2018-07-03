@@ -2,7 +2,30 @@ const chalk = require('chalk');
 
 module.exports = {
 
-    /*  Logs stuff to the console
+    /**
+     * Verbosity of the functions
+     */
+    verbosity: this.levels.verbose,
+
+    /**
+     * Collection of flags representing verbosities of the functions
+     */
+    levels : {
+        /**
+         * No console output
+         */
+        stfu : 0,
+        /**
+         * Minimal console output
+         */
+        quiet : 1,
+        /**
+         * Complete console output
+         */
+        verbose : 2
+    },
+
+    /**  Logs stuff to the console
      *
      *  @param String    level   : String Defines importance of message ("error", "warning", "log", or none)
      *  @param String    text    : Text to log
@@ -31,19 +54,21 @@ module.exports = {
                 log += level;
         };
 
-
         indentText = indent ?  "    ".repeat(indent-1) + "└───" + "> " : "";
 
         log += " - " + time + " ] " + indentText + text;
 
         if (output) {
-            console.log(log);
+
+            if (this.verbosity == this.levels.verbose || (this.verbosity == this.levels.quiet && indent < 1)) {
+                console.log(log);
+            }
         }
 
         return log;
     },
 
-    /*  Leads a string with a set number of a certain character
+    /**  Leads a string with a set number of a certain character
      *
      *  @param String    string         : String to lead
      *  @param int       size           : Amount of characters to lead
@@ -55,9 +80,7 @@ module.exports = {
         var leadedString = string+"";
 
         while (leadedString.length < size){
-
             leadedString = char + leadedString;
-
         }
 
         return leadedString;
